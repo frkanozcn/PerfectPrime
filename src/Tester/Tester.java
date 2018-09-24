@@ -6,7 +6,7 @@ import utils.SymmetricalNumber;
 public class Tester {
 
 	private static final int INITIAL_NUMBER = 10;
-	private static final int FINAL_NUMBER = 100000;
+	private static final int FINAL_NUMBER = 1000000;
 
 	public static void main(String[] args) {
 		int perfectPrimeCounter = 0;
@@ -21,6 +21,8 @@ public class Tester {
 			}
 		}
 		long endTime = System.currentTimeMillis();
+		Long executionTime = endTime-startTime;
+		print("Execution time: " + executionTime.toString() + " ms");
 		int numberOfPerfectPrimes = perfectPrimeCounter / 2;
 		print("Number of perfect primes up from " + INITIAL_NUMBER + " to " + FINAL_NUMBER + ": " + numberOfPerfectPrimes);
 	}
