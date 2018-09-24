@@ -2,16 +2,13 @@ package utils;
 
 public class PrimeFinder {
 
-	public PrimeFinder() {
-		// TODO Auto-generated constructor stub
-	}
-
-	public boolean isPrime(int number) {
-		int sqrt = (int) Math.sqrt(number);
-		for (int i = 0; i < sqrt; i++) {
-			if (number%sqrt == 0) return true;
+	public boolean isPrime(Integer number) {
+		Integer sqrt = (int) Math.sqrt(number);
+		for (int i = 2; i < sqrt; i++) {
+			if (number % i == 0)
+				return false;
 		}
-		return false;
+		return true;
 	}
 
 }
